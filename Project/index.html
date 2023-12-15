@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculadora de empréstimos</title>
+</head>
+<body>
+     <!--Calculadora de empréstimos-->
+     <!--Código HTML & CSS, documentação(y)-->
+     <!--Como localizar elementos em um documento-->
+     <!--Como obter entrada do usuário a parti de elemento de entrada de fomulário-->
+     <!--Como definir o conteúdo HTML de elemento do documento-->
+     <!--Como fazer requisições HTTP em scripts-->
+     <!--Desenhando gráficos com o elemento (canvas)-->
+
+     <!--Calculadora de empréstimos-->
+
+     <table id="conteiner">
+        <tr><th>insira os dados do empréstimo</th>
+            <td></td>
+            <th>saldo do empréstimo, patrimônio líquido acumulado, pagamentos finais de juros</th>
+        </tr>
+        <tr>
+            <td>Montante do empréstimo($):</td>
+            <td><input id="amount" onchange="calculate();"></td>
+            <td rowspan="8"><canvas id="graph"></canvas></td>
+        </tr>
+        <tr>
+            <td>Juro anual(%):</td>
+            <td><input id="apr" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <td>Período de reembolso(years)</td>
+            <td><input id="years" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <td>CEP para encontrar (credores):</td>
+            <td><input id="CEP" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <th>Pagamentos aproximados:</th>
+            <td><button onclick="calculate();">Calcular</button></td>
+        </tr>
+        <tr>
+            <th>pagamento mensal:</th>
+            <td><span class="output" id="payment"></span></td>
+        </tr>
+        <tr>
+            <th>Total de pagamentos:</th> 
+            <td><span class="output" id="total"></span></td>
+        </tr>
+        <tr>
+            <th>Total interesse:</th>
+            <td>$<span class="output" id="totalinterest"></span></td>
+        </tr>
+        <tr>
+            <th>patrocinadores:</th>
+            <td colspan="2">solicite seu empréstimo com um desses bons credores
+                <div id="creadores"></div>
+            </td>
+        </tr>
+     </table>
+
+     <!--O restante é  código javaScript-->
+     <script src="./main.js"></script>
+</body>
+</html>
